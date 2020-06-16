@@ -12,7 +12,7 @@ body {
     min-height: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* header */
@@ -114,6 +114,11 @@ header {
     padding-bottom: 20px;
 }
 
+/* history-section */
+.history-section {
+    width: 80%;
+    margin: 0 auto;
+}
 /* footer */
 footer {
     width: 100%;
