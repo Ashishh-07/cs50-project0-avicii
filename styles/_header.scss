@@ -1,0 +1,30 @@
+header {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo-img {
+    filter: invert(1);
+    width: 80px;
+    margin-left: 30px;
+}
+
+#nav-list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    li a {
+        font-size: 1.8rem;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-decoration: none;
+        margin-right: 100px;
+        color: white;
+    }
+
+    li:last-child a {
+        margin-right: 20px;
+    }
+}

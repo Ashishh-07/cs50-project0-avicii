@@ -1,0 +1,45 @@
+.facts-section {
+    margin-top: 50px;
+}
+
+.fact-div {
+    border-radius: 20px;
+    padding: 10px;
+
+    h6 {
+        font-weight: 700;
+        font-size: 3.2rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-style: italic;
+        font-weight: 300;
+        padding-bottom: 20px;
+    }
+}
+
+#fact1 {
+    background-color: #f4b41a;
+    color: #143d59;
+}
+
+#fact2 {
+    background-color: #00e1d9;
+    color: #5e001f;
+}
+
+#fact3 {
+    background-color: #f2bc94;
+    color: #30110d;
+}
+
+#fact4 {
+    background-color: #283350;
+    color: #ffb500;
+}
+
+#fact5 {
+    background-color: #ffa781;
+    color: #5b0e2d;
+}

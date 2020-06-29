@@ -1,0 +1,23 @@
+html {
+    font-size: 10px;
+
+}
+
+body {
+
+    background: url(../images/image0.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+    /* make footer sticky */
+    min-height: 100%;
+    // display: grid;
+    // grid-template-rows: auto 1fr auto;
+    overflow-x: hidden;
+}
+
+@import './header', './home', 'facts', 'history', 'footer'
