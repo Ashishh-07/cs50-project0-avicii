@@ -27,18 +27,69 @@
         </nav>
     </header>
 
-    <section class="home-section">
-        <h2>AVICII</h2>
-        <p>He said, "One day you'll leave this world behind</p>
-        <p>So live a life you will remember."</p>
-        <span>The nights Lyrics</span>
-        <button onclick="location.href='history.html';">Adventure <span>&#9654;</span></button>
-    </section>
+    <div class="home-container">
+        <section class="home-section">
+            <h2>AVICII</h2>
+            <p>He said, "One day you'll leave this world behind</p>
+            <p>So live a life you will remember."</p>
+            <span>The nights Lyrics</span>
+            <button onclick="location.href='history.html';">Adventure <span>&#9654;</span></button>
+        </section>
+        <section class="register-section">
+            <h4>Join Us</h4>
+            <form id='registration' method="POST">
+                <div class='name-container'>
+                    <div class='form-row'>
+                        <input type='text' id='first' name="first" placeholder="First Name" required />
+                    </div>
+
+                    <div class='form-row'>
+                        <input type='text' id='last' name="last" placeholder="Last Name" required />
+                    </div>
+                </div>
+
+                <div class='form-row'>
+                    <div id='error_email' class="error-div"></div>
+                    <input type='email' id='email' name="email" placeholder="Email" required />
+                </div>
+
+                <div class='form-row'>
+                    <div id='error_password' class="error-div"></div>
+                    <input type='password' id='password' name="password" placeholder="Password" required />
+
+                </div>
+                <div class='form-row'>
+                    <div id='error_passwordRepeat' class="error-div"></div>
+                    <input type='password' id='password-repeat' name="password-repeat" placeholder="Confirm Password"
+                        required />
+                    <div class="error_div"></div>
+
+                </div>
+
+                <div class='form-row'>
+                    <div id='error_agree' class="error-div"></div>
+                    <div class="check-container">
+                        <input type="checkbox" name="agree" id='agree' value="agree" />
+                        <label for="agree">I accept the <span class="green-span">Terms of Use </span>& <span
+                                class="green-span">Privacy
+                                Policy</span>.</label>
+
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <input type="submit" id='submit' value='Register Now' />
+                </div>
+            </form>
+        </section>
+    </div>
 
     <footer>
         <p>Tim Bergling</p>
         <p>1989 - Forever</p>
     </footer>
+
+    <script defer src="scripts/registration.js"></script>
 </body>
 
 </html>
