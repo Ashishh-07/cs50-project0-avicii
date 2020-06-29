@@ -140,6 +140,32 @@ header {
   margin: 0 auto;
 }
 
+.history-section table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 2px solid #343A40;
+  letter-spacing: 1px;
+  background-color: #343a40;
+}
+
+.history-section table td,
+.history-section table th {
+  border-bottom: 1px solid #454D55;
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.history-section table td {
+  font-size: 1.3rem;
+}
+
+.history-section table caption {
+  padding: 10px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
 footer {
   width: 100%;
   margin: 30px 0;
