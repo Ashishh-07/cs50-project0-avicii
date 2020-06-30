@@ -28,6 +28,15 @@ header {
           filter: invert(1);
   width: 80px;
   margin-left: 30px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+#logo-img:hover {
+  -webkit-filter: invert(0.5);
+          filter: invert(0.5);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 #nav-list {
@@ -40,6 +49,22 @@ header {
   height: 100%;
 }
 
+#nav-list li {
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+#nav-list li:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+#nav-list li:last-child a {
+  margin-right: 20px;
+}
+
 #nav-list li a {
   font-size: 1.8rem;
   font-weight: 400;
@@ -49,19 +74,37 @@ header {
   color: white;
 }
 
-#nav-list li:last-child a {
-  margin-right: 20px;
+@media (max-width: 600px) {
+  #nav-list,
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+  }
+  #nav-list {
+    margin-left: 50px;
+    margin-top: 20px;
+    line-height: 20px;
+  }
+  #logo-img {
+    width: 60px;
+  }
 }
 
 .home-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 90%;
+  margin: 50px auto;
 }
 
 .home-container .home-section {
-  padding: 80px 50px 50px 50px;
-  width: 50%;
+  width: 100%;
 }
 
 .home-container .home-section h2 {
@@ -89,6 +132,46 @@ header {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 1.8rem;
+  border-radius: 5rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.home-container .home-section button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.home-container .home-section button:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #d9d9d9;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.home-container .home-section button:hover {
+  color: #003400;
+}
+
+.home-container .home-section button:hover:before {
+  width: 100%;
 }
 
 .home-container .home-section button span {
@@ -97,7 +180,7 @@ header {
 }
 
 .home-container .register-section {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   margin-right: 50px;
   border-radius: 10px;
@@ -107,7 +190,7 @@ header {
   font-size: 3rem;
   text-align: center;
   font-weight: 900;
-  margin: 35px 0;
+  margin-bottom: 10px;
 }
 
 .home-container .register-section form {
@@ -187,6 +270,12 @@ header {
   padding: 10px;
   border-color: transparent;
   margin-top: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .home-container .register-section form .error-div {
@@ -195,22 +284,62 @@ header {
   font-size: 1.3rem;
 }
 
+@media (max-width: 1000px) {
+  .home-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home-section {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .register-section {
+    margin: 0 auto;
+  }
+  button {
+    margin: 0 auto;
+  }
+  h4 {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
+}
+
 .facts-section {
-  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (minmax(200px, 400px))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
+  grid-gap: 50px;
+  margin: 50px auto;
 }
 
 .fact-div {
   border-radius: 20px;
-  padding: 10px;
+  padding: 15px;
+  margin: 0 auto;
 }
 
 .fact-div h6 {
   font-weight: 700;
   font-size: 3.2rem;
   margin-bottom: 10px;
+  padding: 10px 20px;
 }
 
 .fact-div p {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
   font-style: italic;
   font-weight: 300;
   padding-bottom: 20px;
