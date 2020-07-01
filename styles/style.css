@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito&family=Nunito+Sans&display=swap");
 html {
   font-size: 10px;
@@ -110,9 +111,11 @@ header {
 }
 
 .home-container .home-section h2 {
-  font-size: 17rem;
+  font-family: 'MuseoModerno', cursive;
+  font-size: 13rem;
   letter-spacing: 10px;
   font-family: 900;
+  margin-bottom: 10px;
 }
 
 .home-container .home-section p {
