@@ -318,6 +318,9 @@ header {
   html {
     font-size: 8px;
   }
+  h2 {
+    font-size: 8rem !important;
+  }
 }
 
 .facts-section {
@@ -427,13 +430,10 @@ footer p {
 
 .container {
   position: relative;
-  left: 50%;
-  top: 40%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   padding: 6px;
   width: 300px;
   border-radius: 8px;
+  margin: 0 auto;
   background-color: #283025;
   text-align: center;
   font-family: 'Nunito', sans-serif;
@@ -444,7 +444,7 @@ footer p {
 }
 
 .container img {
-  width: 80%;
+  width: 70%;
 }
 
 .container h5 {
@@ -464,8 +464,8 @@ footer p {
 
 .buttons button {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   padding: 16px;
   border-radius: 90px;
   background-color: #E1E6EC;
@@ -486,7 +486,7 @@ footer p {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 42%;
-  height: 42%;
+  height: 32%;
 }
 
 .level {
@@ -499,18 +499,31 @@ footer p {
   margin: 12px 0;
 }
 
-.level::-webkit-slider-thumb {
+.level::-webkit-slider-thumb,
+.level::-moz-range-thumb {
   -webkit-appearance: none;
   background-color: #A2B1C6;
   width: 15px;
-  /* Set a specific slider handle width */
   height: 15px;
-  /* Slider handle height */
   border-radius: 90px;
 }
 
-.level::-moz-range-thumb {
-  width: 50px;
-  height: 50px;
+@media screen and (max-width: 600px) {
+  .container {
+    margin-top: 20px;
+    width: 250px;
+  }
+  .buttons button {
+    width: 30px;
+    height: 30px;
+  }
+  .level::-webkit-slider-thumb,
+  .level::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+  }
+  input#range.level {
+    height: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
